@@ -1,0 +1,28 @@
+Ch 1
+why is not feature engineering important in DL? Could the model be improved by FE?
+Is the success of DL due to solving new kinds of problem? How would we do image classification without DL?
+We can train a DL model with small amounts of data if we have a pretrained DL model.
+Doesn't this, that we don't know what data it was trained on, impose a risk?
+Should we just be satisfied by good metrics in the evaluation even if we don't understand the model or the data is was built on?
+
+Ch3
+When do we use two-branch, multihead networks and inception blocks? Sounds like you really want to solve a problem with DL to come up with these architectures.
+Overall I miss a comparison with standard ML techniques, to really benchmark DL.
+Any rule of thumb, what is the minimum observation count per class when working on a multi class prediction problem?
+IMDB is using 50% good and bad and use a cutoff of 10000 words.
+With very few observations per class, would you use many or few layers in your network?
+For Reuters dataset, with min 10 observations per class, you reach 80% accuracy. Maybe all rare classes are wrongly classified.
+	
+
+Ch4
+How do you generate a training sample with added missing values? And what is best practice in .fillna() for DL?
+In more traditional modelling, dealing and preparing for missing values is included in the methodology.
+How good are DL models to classify unseen observations with many extreme values?
+A normal decision tree have the logics to deal with this
+The drop out rate is generally in the range 0.2-0.5. if 50% drop out gives good results, doesn’t that mean that the signal is very strong and/or the input values are highly correlated? To me it sounds strange to use that drop out frequency on hard problems.
+
+Ch5.1-5.2
+Is it easier to classify colour images than b/w ?
+You can increase your training data by shifting images and rotating them. As convnets lear local patterns this could lead to overfitting on a particular set of images. Any rules of thumb how many times a image can be modified to increase training data?
+There is (so far) always a 50/50 split when classifying two categories, is this because a 10/90 split would be biased to favour the big class? What do we do when we have a 10/90 split at hand?
+
